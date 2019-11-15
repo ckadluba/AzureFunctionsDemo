@@ -11,9 +11,9 @@ namespace AzureFunctionsDemoTests.Logic
         {
             var sut = new ChecksumCalculator();
 
-            var faculty = sut.CalculateMultiplicationChecksum(1234);
+            var checksum = sut.CalculateMultiplicationChecksum(1234);
 
-            Assert.AreEqual(24, faculty);
+            Assert.AreEqual(24, checksum);
         }
 
         [TestMethod]
@@ -21,9 +21,9 @@ namespace AzureFunctionsDemoTests.Logic
         {
             var sut = new ChecksumCalculator();
 
-            var faculty = sut.CalculateMultiplicationChecksum(786743259);
+            var checksum = sut.CalculateMultiplicationChecksum(786743259);
 
-            Assert.AreEqual(2540160, faculty);
+            Assert.AreEqual(2540160, checksum);
         }
 
         [TestMethod]
@@ -31,9 +31,9 @@ namespace AzureFunctionsDemoTests.Logic
         {
             var sut = new ChecksumCalculator();
 
-            var faculty = sut.CalculateMultiplicationChecksum(0);
+            var checksum = sut.CalculateMultiplicationChecksum(0);
 
-            Assert.AreEqual(0, faculty);
+            Assert.AreEqual(0, checksum);
         }
 
         [TestMethod]
@@ -41,9 +41,9 @@ namespace AzureFunctionsDemoTests.Logic
         {
             var sut = new ChecksumCalculator();
 
-            var faculty = sut.CalculateAdditionChecksum(1234);
+            var checksum = sut.CalculateAdditionChecksum(1234);
 
-            Assert.AreEqual(10, faculty);
+            Assert.AreEqual(10, checksum);
         }
 
         [TestMethod]
@@ -51,9 +51,9 @@ namespace AzureFunctionsDemoTests.Logic
         {
             var sut = new ChecksumCalculator();
 
-            var faculty = sut.CalculateAdditionChecksum(786743259);
+            var checksum = sut.CalculateAdditionChecksum(786743259);
 
-            Assert.AreEqual(51, faculty);
+            Assert.AreEqual(51, checksum);
         }
 
         [TestMethod]
@@ -61,9 +61,9 @@ namespace AzureFunctionsDemoTests.Logic
         {
             var sut = new ChecksumCalculator();
 
-            var faculty = sut.CalculateAdditionChecksum(0);
+            var checksum = sut.CalculateAdditionChecksum(0);
 
-            Assert.AreEqual(0, faculty);
+            Assert.AreEqual(0, checksum);
         }
     }
 }

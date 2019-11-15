@@ -1,23 +1,16 @@
-﻿#region Usings
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 
-#endregion
-
-[assembly:InternalsVisibleTo("AzureFunctionsDemoTests")]
+[assembly: InternalsVisibleTo("AzureFunctionsDemoTests")]
 
 namespace AzureFunctionsDemo.Logic
 {
     internal class ChecksumCalculator
     {
         public int CalculateMultiplicationChecksum(int number)
-            => IterateDigits(number, 1, (sum, digit) => sum * digit);
+            => IterateDigits(number, 1, (product, digit) => product * digit);
 
-        public int CalculateAdditionChecksum(int number) 
+        public int CalculateAdditionChecksum(int number)
             => IterateDigits(number, 0, (sum, digit) => sum + digit);
 
         private static int IterateDigits(int number, int result, Func<int, int, int> calculate)

@@ -14,7 +14,7 @@ namespace AzureFunctionsDemo.Functions
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP CalculateAddChecksum trigger function processing a request.");
+            log.LogInformation("C# HTTP trigger function CalculateAddChecksum processing a request.");
 
             var numberParameter = req.Query["number"].ToString();
             if (string.IsNullOrEmpty(numberParameter))
